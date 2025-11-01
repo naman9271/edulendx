@@ -6,12 +6,9 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
 import {
   GraduationCap,
   User,
-  Mail,
-  Upload,
   Plus,
   X,
   CheckCircle,
@@ -50,7 +47,7 @@ export function EduIDMintingComponent() {
   const [courseInput, setCourseInput] = useState('')
 
   // Step 1: WorldID Verification (Simulated)
-  const handleWorldIDVerify = async () => {
+  const handleWorldIDVerify = () => {
     // In production, integrate with WorldID SDK
     setIsVerified(true)
     setFormData({
@@ -65,7 +62,7 @@ export function EduIDMintingComponent() {
   }
 
   // Step 3: Academic Records
-  const handleRecordChange = (field: string, value: any) => {
+  const handleRecordChange = (field: string, value: string | number) => {
     setCurrentRecord({ ...currentRecord, [field]: value })
   }
 
@@ -182,7 +179,7 @@ export function EduIDMintingComponent() {
               <span>Verify Your Identity</span>
             </CardTitle>
             <CardDescription>
-              Use WorldID to prove you're a unique human (optional but recommended)
+              Use WorldID to prove you&apos;re a unique human (optional but recommended)
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

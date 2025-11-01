@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Vote, CheckCircle2, X } from 'lucide-react'
+import { Vote, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -47,7 +46,7 @@ export function CreateProposal({ onClose, onSuccess }: CreateProposalProps) {
           <select
             id="type"
             value={formData.type}
-            onChange={(e) => setFormData({ ...formData, type: e.target.value as any })}
+            onChange={(e) => setFormData({ ...formData, type: e.target.value as 'scholarship-criteria' | 'interest-rate' | 'fund-distribution' | 'other' })}
             className="w-full bg-black/30 border border-blue-500/30 rounded-md px-3 py-2 text-white"
           >
             <option value="scholarship-criteria">Scholarship Criteria</option>

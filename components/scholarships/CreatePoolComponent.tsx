@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Award, DollarSign, Users, CheckCircle2, Plus, X } from 'lucide-react'
+import { Award, DollarSign, CheckCircle2, Plus, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -288,7 +288,7 @@ export function CreatePoolComponent({ onClose, onSuccess }: CreatePoolComponentP
             <div className="flex items-start gap-3">
               <Award className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm">
-                <div className="font-semibold text-blue-300 mb-1">You'll Receive an Impact NFT</div>
+                <div className="font-semibold text-blue-300 mb-1">You&apos;ll Receive an Impact NFT</div>
                 <div className="text-gray-400">
                   Track your impact, earn governance rights, and watch your NFT evolve as students succeed.
                 </div>

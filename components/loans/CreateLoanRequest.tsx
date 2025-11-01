@@ -8,7 +8,6 @@ import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import { Badge } from '@/components/ui/badge'
 
 interface CreateLoanRequestProps {
   onClose?: () => void
@@ -38,14 +37,13 @@ export function CreateLoanRequest({ onClose, onSuccess, userLearnScore = 0 }: Cr
   const calculateReturn = () => {
     const principal = parseFloat(formData.amount || '0')
     const rate = parseFloat(formData.interestRate || suggestedRate) / 100
-    const term = parseInt(formData.term || '12')
     return principal * (1 + rate)
   }
 
   const monthlyPayment = () => {
     const total = calculateReturn()
-    const term = parseInt(formData.term || '12')
-    return total / term
+    const termMonths = parseInt(formData.term || '12')
+    return total / termMonths
   }
 
   const handleSubmit = async () => {

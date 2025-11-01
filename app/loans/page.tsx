@@ -441,7 +441,7 @@ export default function LoansPage() {
                   <AlertCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-yellow-200">
                     <div className="font-semibold mb-1">Investment Risk Warning</div>
-                    <div>Lending involves risk. While LearnScore helps assess creditworthiness, there's no guarantee of repayment. Only invest what you can afford to lose.</div>
+                    <div>Lending involves risk. While LearnScore helps assess creditworthiness, there&apos;s no guarantee of repayment. Only invest what you can afford to lose.</div>
                   </div>
                 </div>
               </Card>

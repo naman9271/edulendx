@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Users, TrendingUp, CheckCircle2, XCircle, Clock, Plus, Vote } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -57,7 +56,6 @@ const mockProposals: DAOProposal[] = [
 ]
 
 export default function GovernancePage() {
-  const [selectedProposal, setSelectedProposal] = useState<DAOProposal | null>(null)
 
   const getStatusColor = (status: string) => {
     switch (status) {

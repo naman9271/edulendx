@@ -1,9 +1,9 @@
 'use client'
 
-import { LearnScore, LearnScoreComponents } from '@/types/edulendx'
+import { LearnScore } from '@/types/edulendx'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
-import { getGrade, getGradeColor } from '@/lib/learnScore'
+import { getGradeColor } from '@/lib/learnScore'
 import { Trophy, BookOpen, DollarSign, Award, Users } from 'lucide-react'
 
 interface LearnScoreDisplayProps {

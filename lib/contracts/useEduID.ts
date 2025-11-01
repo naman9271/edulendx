@@ -1,5 +1,4 @@
 import { useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
-import { parseEther } from 'viem';
 import { eduIDContractABI } from './abi';
 
 const EDUID_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_EDUID_CONTRACT_ADDRESS as `0x${string}`;
