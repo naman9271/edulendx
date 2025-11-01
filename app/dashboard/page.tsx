@@ -74,11 +74,11 @@ export default function DashboardPage() {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black flex items-center justify-center p-4 pt-24">
-          <Card className="max-w-md w-full bg-gradient-to-br from-purple-950/50 to-pink-950/50 backdrop-blur-lg border-purple-500/20 p-12 text-center">
-            <GraduationCap className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 pt-24">
+          <Card className="max-w-md w-full bg-slate-900/50 backdrop-blur-lg border-slate-800 p-12 text-center">
+            <GraduationCap className="w-16 h-16 text-blue-400 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">Connect Your Wallet</h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-slate-500 mb-8">
               Please connect your wallet to access your dashboard
             </p>
           </Card>
@@ -91,18 +91,18 @@ export default function DashboardPage() {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black flex items-center justify-center p-4 pt-24">
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 pt-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="max-w-2xl w-full"
         >
-          <Card className="bg-gradient-to-br from-purple-950/50 to-pink-950/50 backdrop-blur-lg border-purple-500/20 p-12 text-center">
-            <div className="inline-flex p-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 mb-8">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-12 text-center">
+            <div className="inline-flex p-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 mb-8">
               <GraduationCap className="w-12 h-12 text-white" />
             </div>
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Welcome to EduLendX!
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -110,36 +110,36 @@ export default function DashboardPage() {
             </p>
             <div className="space-y-4 text-left mb-10">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <Sparkles className="w-4 h-4 text-purple-400" />
+                <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Sparkles className="w-4 h-4 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Soulbound Identity NFT</h3>
-                  <p className="text-sm text-gray-400">Your permanent academic identity on blockchain</p>
+                  <p className="text-sm text-slate-500">Your permanent academic identity on blockchain</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <TrendingUp className="w-4 h-4 text-purple-400" />
+                <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <TrendingUp className="w-4 h-4 text-cyan-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Build Your LearnScore</h3>
-                  <p className="text-sm text-gray-400">Reputation system based on achievements and behavior</p>
+                  <p className="text-sm text-slate-500">Reputation system based on achievements and behavior</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <Award className="w-4 h-4 text-purple-400" />
+                <div className="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Award className="w-4 h-4 text-indigo-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Access Funding</h3>
-                  <p className="text-sm text-gray-400">Scholarships and loans based on your reputation</p>
+                  <p className="text-sm text-slate-500">Scholarships and loans based on your reputation</p>
                 </div>
               </div>
             </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-10 py-6 text-lg rounded-full shadow-2xl shadow-purple-500/50 transition-all hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-10 py-6 text-lg rounded-full shadow-2xl shadow-blue-500/30 transition-all hover:scale-105"
               onClick={() => setShowEduIDMinting(true)}
             >
               Create Your EduID
@@ -156,16 +156,17 @@ export default function DashboardPage() {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black p-4 pt-24">
-        <div className="max-w-5xl mx-auto">
-          <Button
-            variant="outline"
-            className="mb-6 border-purple-500/50 hover:bg-purple-500/10"
-            onClick={() => setShowEduIDMinting(false)}
-          >
-            ← Back to Dashboard
-          </Button>
-          <EduIDMintingComponent />
+        <div className="min-h-screen bg-slate-950 p-4 pt-24">
+          <div className="max-w-5xl mx-auto">
+            <Button
+              variant="outline"
+              className="mb-6 border-slate-700 hover:bg-slate-800"
+              onClick={() => setShowEduIDMinting(false)}
+            >
+              ← Back to Dashboard
+            </Button>
+            <EduIDMintingComponent />
+          </div>
         </div>
       </>
     )
@@ -174,7 +175,7 @@ export default function DashboardPage() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black p-4 pt-24">
+      <div className="min-h-screen bg-slate-950 p-4 pt-24">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <motion.div
@@ -184,11 +185,11 @@ export default function DashboardPage() {
         >
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-4xl font-bold">Dashboard</h1>
-            <Badge className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-500/50 text-purple-300">
+            <Badge className="bg-slate-800 border-slate-700 text-slate-300">
               {address?.slice(0, 6)}...{address?.slice(-4)}
             </Badge>
           </div>
-          <p className="text-gray-400">Manage your academic identity, loans, and scholarships</p>
+          <p className="text-slate-500">Manage your academic identity, loans, and scholarships</p>
         </motion.div>
 
         {/* Quick Stats */}
@@ -198,55 +199,55 @@ export default function DashboardPage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-lg border-blue-500/20 p-6 hover:border-blue-500/50 transition-all">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-blue-500/30 transition-all">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 rounded-xl bg-blue-500/20">
+              <div className="p-3 rounded-xl bg-blue-500/10">
                 <TrendingUp className="w-6 h-6 text-blue-400" />
               </div>
               <ArrowUpRight className="w-5 h-5 text-green-400" />
             </div>
             <div className="text-3xl font-bold mb-1">{mockLearnScore.total}</div>
-            <div className="text-sm text-gray-400">LearnScore™</div>
-            <Badge className="mt-2 bg-blue-500/20 border-blue-500/50 text-blue-300">
+            <div className="text-sm text-slate-500">LearnScore™</div>
+            <Badge className="mt-2 bg-blue-500/10 border-blue-500/30 text-blue-400">
               Grade {mockLearnScore.grade}
             </Badge>
           </Card>
 
-          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-lg border-purple-500/20 p-6 hover:border-purple-500/50 transition-all">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-cyan-500/30 transition-all">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 rounded-xl bg-purple-500/20">
-                <DollarSign className="w-6 h-6 text-purple-400" />
+              <div className="p-3 rounded-xl bg-cyan-500/10">
+                <DollarSign className="w-6 h-6 text-cyan-400" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">${mockLoanDetails.remainingBalance.toLocaleString()}</div>
-            <div className="text-sm text-gray-400">Outstanding Loans</div>
+            <div className="text-sm text-slate-500">Outstanding Loans</div>
             <div className="mt-2 text-xs text-green-400">
               Next Payment: ${mockLoanDetails.nextPaymentAmount}
             </div>
           </Card>
 
-          <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-lg border-green-500/20 p-6 hover:border-green-500/50 transition-all">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-indigo-500/30 transition-all">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 rounded-xl bg-green-500/20">
-                <Award className="w-6 h-6 text-green-400" />
+              <div className="p-3 rounded-xl bg-indigo-500/10">
+                <Award className="w-6 h-6 text-indigo-400" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">${mockScholarships[0]?.amount.toLocaleString()}</div>
-            <div className="text-sm text-gray-400">Scholarships Earned</div>
-            <div className="mt-2 text-xs text-gray-500">
+            <div className="text-sm text-slate-500">Scholarships Earned</div>
+            <div className="mt-2 text-xs text-slate-600">
               {mockScholarships.length} scholarship{mockScholarships.length !== 1 ? 's' : ''}
             </div>
           </Card>
 
-          <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg border-orange-500/20 p-6 hover:border-orange-500/50 transition-all">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-sky-500/30 transition-all">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 rounded-xl bg-orange-500/20">
-                <Users className="w-6 h-6 text-orange-400" />
+              <div className="p-3 rounded-xl bg-sky-500/10">
+                <Users className="w-6 h-6 text-sky-400" />
               </div>
             </div>
             <div className="text-3xl font-bold mb-1">0</div>
-            <div className="text-sm text-gray-400">Students Helped</div>
-            <div className="mt-2 text-xs text-gray-500">
+            <div className="text-sm text-slate-500">Students Helped</div>
+            <div className="mt-2 text-xs text-slate-600">
               Through DAO participation
             </div>
           </Card>
@@ -431,7 +432,7 @@ export default function DashboardPage() {
             </div>
           </Card>
         </motion.div>
-      </div>
+        </div>
       </div>
     </>
   )

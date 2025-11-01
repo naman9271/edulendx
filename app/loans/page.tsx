@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Progress } from '@/components/ui/progress'
+import { Header } from '@/components/ui/header'
 import type { LoanNFT } from '@/types/edulendx'
 
 // Mock loan marketplace data
@@ -108,8 +109,10 @@ export default function LoansPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black p-4 pt-24">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <>
+      <Header />
+      <div className="min-h-screen bg-slate-950 p-4 pt-24">
+        <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -118,12 +121,12 @@ export default function LoansPage() {
           className="flex items-center justify-between"
         >
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Loan Marketplace
             </h1>
-            <p className="text-gray-400 text-lg">Fund students or request loans with fair, transparent terms</p>
+            <p className="text-slate-500 text-lg">Fund students or request loans with fair, transparent terms</p>
           </div>
-          <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500">
+          <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 shadow-lg shadow-blue-500/20">
             <Plus className="w-4 h-4 mr-2" />
             Request Loan
           </Button>
@@ -136,29 +139,29 @@ export default function LoansPage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6"
         >
-          <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-lg border-green-500/20 p-6">
-            <DollarSign className="w-8 h-8 text-green-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-blue-500/30 transition-all">
+            <DollarSign className="w-8 h-8 text-blue-400 mb-3" />
             <div className="text-3xl font-bold">
               ${mockLoans.reduce((sum, l) => sum + l.requestedAmount, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-gray-400">Total Requested</div>
+            <div className="text-sm text-slate-500">Total Requested</div>
           </Card>
-          <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-lg border-blue-500/20 p-6">
-            <TrendingUp className="w-8 h-8 text-blue-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-cyan-500/30 transition-all">
+            <TrendingUp className="w-8 h-8 text-cyan-400 mb-3" />
             <div className="text-3xl font-bold">
               ${mockLoans.reduce((sum, l) => sum + l.fundedAmount, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-gray-400">Total Funded</div>
+            <div className="text-sm text-slate-500">Total Funded</div>
           </Card>
-          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-lg border-purple-500/20 p-6">
-            <Clock className="w-8 h-8 text-purple-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-indigo-500/30 transition-all">
+            <Clock className="w-8 h-8 text-indigo-400 mb-3" />
             <div className="text-3xl font-bold">{mockLoans.length}</div>
-            <div className="text-sm text-gray-400">Active Loans</div>
+            <div className="text-sm text-slate-500">Active Loans</div>
           </Card>
-          <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg border-orange-500/20 p-6">
-            <Shield className="w-8 h-8 text-orange-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-sky-500/30 transition-all">
+            <Shield className="w-8 h-8 text-sky-400 mb-3" />
             <div className="text-3xl font-bold">98%</div>
-            <div className="text-sm text-gray-400">Repayment Rate</div>
+            <div className="text-sm text-slate-500">Repayment Rate</div>
           </Card>
         </motion.div>
 
@@ -170,17 +173,17 @@ export default function LoansPage() {
           className="flex gap-4"
         >
           <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-500" />
             <Input
               placeholder="Search loans by purpose..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 bg-black/30 border-green-500/30 focus:border-green-500/50 text-white"
+              className="pl-12 bg-slate-900/50 border-slate-800 focus:border-blue-500/50 text-white placeholder:text-slate-600"
             />
           </div>
           <Button
             variant="outline"
-            className="border-green-500/30 hover:bg-green-500/10"
+            className="border-slate-700 hover:bg-slate-800"
           >
             <Filter className="w-4 h-4 mr-2" />
             Filters
@@ -209,10 +212,10 @@ export default function LoansPage() {
                 className="cursor-pointer"
                 onClick={() => setSelectedLoan(loan)}
               >
-                <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 backdrop-blur-lg border-green-500/20 p-6 hover:border-green-500/50 transition-all h-full flex flex-col">
+                <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-blue-500/30 transition-all h-full flex flex-col">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <div className="text-sm text-gray-400 mb-1">Loan #{loan.tokenId}</div>
+                      <div className="text-sm text-slate-500 mb-1">Loan #{loan.tokenId}</div>
                       <h3 className="text-lg font-bold mb-2 line-clamp-2">{loan.purpose}</h3>
                     </div>
                     <Badge className={getStatusColor(loan.status)}>
@@ -223,41 +226,41 @@ export default function LoansPage() {
                   <div className="flex-1 space-y-4 mb-4">
                     <div>
                       <div className="flex items-center justify-between text-sm mb-2">
-                        <span className="text-gray-400">Requested</span>
+                        <span className="text-slate-500">Requested</span>
                         <span className="font-bold text-xl">${loan.requestedAmount.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mb-2">
-                        <span className="text-gray-400">Funded</span>
-                        <span className="font-bold text-green-400">${loan.fundedAmount.toLocaleString()}</span>
+                        <span className="text-slate-500">Funded</span>
+                        <span className="font-bold text-blue-400">${loan.fundedAmount.toLocaleString()}</span>
                       </div>
-                      <Progress value={fundingProgress} className="h-2 bg-black/30" />
-                      <div className="text-xs text-gray-400 mt-1">{fundingProgress.toFixed(0)}% funded</div>
+                      <Progress value={fundingProgress} className="h-2 bg-slate-800" />
+                      <div className="text-xs text-slate-500 mt-1">{fundingProgress.toFixed(0)}% funded</div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>
-                        <div className="text-gray-400 mb-1">Interest Rate</div>
+                        <div className="text-slate-500 mb-1">Interest Rate</div>
                         <div className="font-bold">{loan.interestRate / 100}% APR</div>
                       </div>
                       <div>
-                        <div className="text-gray-400 mb-1">Term</div>
+                        <div className="text-slate-500 mb-1">Term</div>
                         <div className="font-bold">{loan.term} months</div>
                       </div>
                     </div>
 
-                    <div className="bg-black/30 rounded-lg p-3">
+                    <div className="bg-slate-800/50 rounded-lg p-3">
                       <div className="flex items-center justify-between text-sm mb-1">
-                        <span className="text-gray-400">LearnScore</span>
+                        <span className="text-slate-500">LearnScore</span>
                         <span className="font-bold">{learnScore}</span>
                       </div>
                       <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400">Risk Level</span>
+                        <span className="text-slate-500">Risk Level</span>
                         <span className={`font-bold ${risk.color}`}>{risk.level}</span>
                       </div>
                     </div>
                   </div>
 
-                  <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 shadow-lg shadow-blue-500/20">
                     Fund Loan
                   </Button>
                 </Card>
@@ -284,7 +287,7 @@ export default function LoansPage() {
               className="max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <Card className="bg-gradient-to-br from-green-950 to-emerald-950 backdrop-blur-lg border-green-500/20 p-8">
+              <Card className="bg-slate-900 backdrop-blur-lg border-slate-800 p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -293,13 +296,13 @@ export default function LoansPage() {
                         {selectedLoan.status}
                       </Badge>
                     </div>
-                    <p className="text-gray-400 text-lg">{selectedLoan.purpose}</p>
+                    <p className="text-slate-500 text-lg">{selectedLoan.purpose}</p>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => setSelectedLoan(null)}
-                    className="hover:bg-green-500/20"
+                    className="hover:bg-slate-800"
                   >
                     <X className="w-5 h-5" />
                   </Button>
@@ -446,6 +449,7 @@ export default function LoansPage() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+      </div>
+    </>
   )
 }

@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
+import { Header } from '@/components/ui/header'
 import type { DAOProposal } from '@/types/edulendx'
 
 // Mock proposals
@@ -83,8 +84,10 @@ export default function GovernancePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-purple-950/20 to-black p-4 pt-24">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <>
+      <Header />
+      <div className="min-h-screen bg-slate-950 p-4 pt-24">
+        <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,12 +96,12 @@ export default function GovernancePage() {
           className="flex items-center justify-between"
         >
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent mb-2">
               DAO Governance
             </h1>
-            <p className="text-gray-400 text-lg">Shape the future of education financing through democratic voting</p>
+            <p className="text-slate-500 text-lg">Shape the future of education financing through democratic voting</p>
           </div>
-          <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500">
+          <Button className="bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 shadow-lg shadow-sky-500/20">
             <Plus className="w-4 h-4 mr-2" />
             New Proposal
           </Button>
@@ -111,25 +114,25 @@ export default function GovernancePage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6"
         >
-          <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-lg border-blue-500/20 p-6">
-            <Users className="w-8 h-8 text-blue-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-sky-500/30 transition-all">
+            <Users className="w-8 h-8 text-sky-400 mb-3" />
             <div className="text-3xl font-bold">1,247</div>
-            <div className="text-sm text-gray-400">Active Voters</div>
+            <div className="text-sm text-slate-500">Active Voters</div>
           </Card>
-          <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-lg border-green-500/20 p-6">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-green-500/30 transition-all">
             <CheckCircle2 className="w-8 h-8 text-green-400 mb-3" />
             <div className="text-3xl font-bold">{mockProposals.filter(p => p.status === 'passed').length}</div>
-            <div className="text-sm text-gray-400">Passed Proposals</div>
+            <div className="text-sm text-slate-500">Passed Proposals</div>
           </Card>
-          <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg border-orange-500/20 p-6">
-            <Clock className="w-8 h-8 text-orange-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-blue-500/30 transition-all">
+            <Clock className="w-8 h-8 text-blue-400 mb-3" />
             <div className="text-3xl font-bold">{mockProposals.filter(p => p.status === 'active').length}</div>
-            <div className="text-sm text-gray-400">Active Proposals</div>
+            <div className="text-sm text-slate-500">Active Proposals</div>
           </Card>
-          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-lg border-purple-500/20 p-6">
-            <TrendingUp className="w-8 h-8 text-purple-400 mb-3" />
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-cyan-500/30 transition-all">
+            <TrendingUp className="w-8 h-8 text-cyan-400 mb-3" />
             <div className="text-3xl font-bold">156K</div>
-            <div className="text-sm text-gray-400">Total Voting Power</div>
+            <div className="text-sm text-slate-500">Total Voting Power</div>
           </Card>
         </motion.div>
 
@@ -143,13 +146,13 @@ export default function GovernancePage() {
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold">All Proposals</h2>
             <div className="flex gap-2">
-              <Button variant="outline" className="border-blue-500/30 hover:bg-blue-500/10 text-sm">
+              <Button variant="outline" className="border-slate-700 bg-slate-800 hover:bg-slate-700 text-sm">
                 Active
               </Button>
-              <Button variant="ghost" className="text-sm text-gray-400">
+              <Button variant="ghost" className="text-sm text-slate-500 hover:bg-slate-800">
                 Passed
               </Button>
-              <Button variant="ghost" className="text-sm text-gray-400">
+              <Button variant="ghost" className="text-sm text-slate-500 hover:bg-slate-800">
                 Rejected
               </Button>
             </div>
@@ -170,7 +173,7 @@ export default function GovernancePage() {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.01 }}
               >
-                <Card className="bg-gradient-to-br from-blue-950/50 to-cyan-950/50 backdrop-blur-lg border-blue-500/20 p-6 hover:border-blue-500/50 transition-all">
+                <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-sky-500/30 transition-all">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
@@ -179,8 +182,8 @@ export default function GovernancePage() {
                           {proposal.status}
                         </Badge>
                       </div>
-                      <p className="text-gray-400 mb-3">{proposal.description}</p>
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <p className="text-slate-500 mb-3">{proposal.description}</p>
+                      <div className="flex items-center gap-4 text-sm text-slate-500">
                         <span>Proposed by {proposal.proposer}</span>
                         <span>•</span>
                         <span>{getTimeRemaining(proposal.votingEnds)}</span>
@@ -216,15 +219,15 @@ export default function GovernancePage() {
                       <Progress value={againstPercentage} className="h-2 bg-black/30" />
                     </div>
 
-                    <div className="bg-black/30 rounded-lg p-4">
+                    <div className="bg-slate-800/50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-gray-400">Quorum Progress</span>
+                        <span className="text-sm text-slate-500">Quorum Progress</span>
                         <span className="text-sm font-bold">
                           {totalVotes.toLocaleString()} / {quorumRequired.toLocaleString()}
                         </span>
                       </div>
-                      <Progress value={quorumProgress} className="h-2 bg-black/50" />
-                      <div className="text-xs text-gray-400 mt-1">
+                      <Progress value={quorumProgress} className="h-2 bg-slate-900" />
+                      <div className="text-xs text-slate-500 mt-1">
                         {quorumProgress >= 100 ? 'Quorum reached ✓' : `${(100 - quorumProgress).toFixed(1)}% more needed`}
                       </div>
                     </div>
@@ -233,11 +236,11 @@ export default function GovernancePage() {
                   {/* Vote Buttons */}
                   {proposal.status === 'active' && (
                     <div className="flex gap-4 mt-6">
-                      <Button className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500">
+                      <Button className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 shadow-lg shadow-green-500/20">
                         <CheckCircle2 className="w-4 h-4 mr-2" />
                         Vote For
                       </Button>
-                      <Button className="flex-1 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-500 hover:to-pink-500">
+                      <Button className="flex-1 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-500/20">
                         <XCircle className="w-4 h-4 mr-2" />
                         Vote Against
                       </Button>
@@ -245,7 +248,7 @@ export default function GovernancePage() {
                   )}
 
                   {proposal.status === 'passed' && (
-                    <Button className="w-full mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500">
+                    <Button className="w-full mt-6 bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 shadow-lg shadow-sky-500/20">
                       <Vote className="w-4 h-4 mr-2" />
                       Execute Proposal
                     </Button>
@@ -262,29 +265,30 @@ export default function GovernancePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Card className="bg-gradient-to-r from-purple-950/50 to-pink-950/50 backdrop-blur-lg border-purple-500/20 p-8">
+          <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-8">
             <h2 className="text-2xl font-bold mb-6">Your Voting Power</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <div className="text-sm text-gray-400 mb-1">Impact NFTs</div>
+                <div className="text-sm text-slate-500 mb-1">Impact NFTs</div>
                 <div className="text-3xl font-bold">3</div>
-                <div className="text-xs text-gray-400 mt-1">15,000 voting power</div>
+                <div className="text-xs text-slate-600 mt-1">15,000 voting power</div>
               </div>
               <div>
-                <div className="text-sm text-gray-400 mb-1">Governance Tokens</div>
+                <div className="text-sm text-slate-500 mb-1">Governance Tokens</div>
                 <div className="text-3xl font-bold">2,500</div>
-                <div className="text-xs text-gray-400 mt-1">2,500 voting power</div>
+                <div className="text-xs text-slate-600 mt-1">2,500 voting power</div>
               </div>
               <div>
-                <div className="text-sm text-gray-400 mb-1">Total Voting Power</div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div className="text-sm text-slate-500 mb-1">Total Voting Power</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">
                   17,500
                 </div>
               </div>
             </div>
           </Card>
         </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
