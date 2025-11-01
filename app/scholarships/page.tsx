@@ -113,7 +113,7 @@ export default function ScholarshipsPage() {
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent mb-2">
               Scholarship Pools
             </h1>
-            <p className="text-slate-500 text-lg">Discover funding opportunities for your education</p>
+            <p className="text-slate-300 text-lg">Discover funding opportunities for your education</p>
           </div>
           <Button className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 shadow-lg shadow-indigo-500/20">
             <Plus className="w-4 h-4 mr-2" />
@@ -130,29 +130,29 @@ export default function ScholarshipsPage() {
         >
           <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-indigo-500/30 transition-all">
             <Award className="w-8 h-8 text-indigo-400 mb-3" />
-            <div className="text-3xl font-bold">{mockPools.length}</div>
-            <div className="text-sm text-slate-500">Active Pools</div>
+            <div className="text-3xl font-bold text-white">{mockPools.length}</div>
+            <div className="text-sm text-slate-400">Active Pools</div>
           </Card>
           <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-blue-500/30 transition-all">
             <DollarSign className="w-8 h-8 text-blue-400 mb-3" />
-            <div className="text-3xl font-bold">
+            <div className="text-3xl font-bold text-white">
               ${mockPools.reduce((sum, p) => sum + p.availableFunds, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-slate-500">Available Funds</div>
+            <div className="text-sm text-slate-400">Available Funds</div>
           </Card>
           <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-cyan-500/30 transition-all">
             <Users className="w-8 h-8 text-cyan-400 mb-3" />
-            <div className="text-3xl font-bold">
+            <div className="text-3xl font-bold text-white">
               {mockPools.reduce((sum, p) => sum + p.donors.length, 0)}
             </div>
-            <div className="text-sm text-slate-500">Total Donors</div>
+            <div className="text-sm text-slate-400">Total Donors</div>
           </Card>
           <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-sky-500/30 transition-all">
             <TrendingUp className="w-8 h-8 text-sky-400 mb-3" />
-            <div className="text-3xl font-bold">
+            <div className="text-3xl font-bold text-white">
               ${mockPools.reduce((sum, p) => sum + p.yieldGenerated, 0).toLocaleString()}
             </div>
-            <div className="text-sm text-slate-500">Yield Generated</div>
+            <div className="text-sm text-slate-400">Yield Generated</div>
           </Card>
         </motion.div>
 
@@ -202,8 +202,8 @@ export default function ScholarshipsPage() {
               <Card className="bg-slate-900/50 backdrop-blur-lg border-slate-800 p-6 hover:border-indigo-500/30 transition-all h-full">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{pool.name}</h3>
-                    <p className="text-sm text-slate-500 line-clamp-2">{pool.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{pool.name}</h3>
+                    <p className="text-sm text-slate-300 line-clamp-2">{pool.description}</p>
                   </div>
                   <Badge className="bg-green-500/20 border-green-500/50 text-green-300 ml-4">
                     {pool.status}
@@ -212,16 +212,16 @@ export default function ScholarshipsPage() {
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Available Funds</span>
-                    <span className="font-bold text-blue-400">${pool.availableFunds.toLocaleString()}</span>
+                    <span className="text-slate-400">Available Funds</span>
+                    <span className="font-bold text-blue-300">${pool.availableFunds.toLocaleString()}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Min GPA Required</span>
-                    <span className="font-bold">{pool.criteria.minGPA || 'N/A'}</span>
+                    <span className="text-slate-400">Min GPA Required</span>
+                    <span className="font-bold text-white">{pool.criteria.minGPA || 'N/A'}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Donors</span>
-                    <span className="font-bold">{pool.donors.length}</span>
+                    <span className="text-slate-400">Donors</span>
+                    <span className="font-bold text-white">{pool.donors.length}</span>
                   </div>
                 </div>
 
@@ -273,8 +273,8 @@ export default function ScholarshipsPage() {
               <Card className="bg-gradient-to-br from-purple-950 to-pink-950 backdrop-blur-lg border-purple-500/20 p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h2 className="text-3xl font-bold mb-2">{selectedPool.name}</h2>
-                    <p className="text-gray-400">{selectedPool.description}</p>
+                    <h2 className="text-3xl font-bold text-white mb-2">{selectedPool.name}</h2>
+                    <p className="text-slate-300">{selectedPool.description}</p>
                   </div>
                   <Button
                     variant="ghost"
@@ -289,23 +289,23 @@ export default function ScholarshipsPage() {
                 {/* Pool Stats */}
                 <div className="grid md:grid-cols-3 gap-4 mb-8">
                   <div className="bg-black/30 rounded-xl p-4 border border-purple-500/20">
-                    <div className="text-sm text-gray-400 mb-1">Total Funds</div>
-                    <div className="text-2xl font-bold">${selectedPool.totalFunds.toLocaleString()}</div>
+                    <div className="text-sm text-slate-300 mb-1">Total Funds</div>
+                    <div className="text-2xl font-bold text-white">${selectedPool.totalFunds.toLocaleString()}</div>
                   </div>
                   <div className="bg-black/30 rounded-xl p-4 border border-green-500/20">
-                    <div className="text-sm text-gray-400 mb-1">Available</div>
-                    <div className="text-2xl font-bold text-green-400">${selectedPool.availableFunds.toLocaleString()}</div>
+                    <div className="text-sm text-slate-300 mb-1">Available</div>
+                    <div className="text-2xl font-bold text-green-300">${selectedPool.availableFunds.toLocaleString()}</div>
                   </div>
                   <div className="bg-black/30 rounded-xl p-4 border border-blue-500/20">
-                    <div className="text-sm text-gray-400 mb-1">Yield Generated</div>
-                    <div className="text-2xl font-bold text-blue-400">${selectedPool.yieldGenerated.toLocaleString()}</div>
+                    <div className="text-sm text-slate-300 mb-1">Yield Generated</div>
+                    <div className="text-2xl font-bold text-blue-300">${selectedPool.yieldGenerated.toLocaleString()}</div>
                   </div>
                 </div>
 
                 {/* Eligibility Criteria */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold mb-4">Eligibility Criteria</h3>
-                  <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-white mb-4">Eligibility Criteria</h3>
+                  <div className="space-y-3 text-slate-200">
                     {selectedPool.criteria.minGPA && (
                       <div className="flex items-center gap-3">
                         <CheckCircle2 className="w-5 h-5 text-green-400" />
