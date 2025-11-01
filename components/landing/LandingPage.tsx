@@ -89,13 +89,10 @@ export function LandingPage() {
                   Launch App
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link><Button
-  size="lg"
-  className="bg-transparent border-2 border-slate-700 text-white hover:bg-slate-800 hover:border-slate-600 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 font-semibold"
->
-  Watch Demo
-</Button>
-
+              </Link>
+              <Button size="lg" variant="outline" className="border-2 border-slate-300 text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all hover:scale-105 font-semibold">
+                Watch Demo
+              </Button>
             </div>
 
             {/* Stats */}

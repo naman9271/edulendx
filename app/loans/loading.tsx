@@ -1,5 +1,5 @@
 import { Loader } from "../../components/ui/loader";
 
-export default function DashboardLoading() {
+export default function LoansLoading() {
   return <Loader />;
 }
