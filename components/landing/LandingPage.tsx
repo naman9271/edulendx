@@ -90,9 +90,13 @@ export function LandingPage() {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-2 border-slate-300 text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all hover:scale-105 font-semibold">
-                Watch Demo
-              </Button>
+              <Button
+  size="lg"
+  className="bg-transparent border-2 border-slate-700 text-white px-8 py-6 text-lg rounded-xl backdrop-blur-sm font-semibold transition-none"
+>
+  Watch Demo
+</Button>
+
             </div>
 
             {/* Stats */}
