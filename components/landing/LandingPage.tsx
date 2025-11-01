@@ -89,10 +89,13 @@ export function LandingPage() {
                   Launch App
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
-              <Button size="lg" variant="outline" className="border-slate-700 text-white hover:bg-slate-800 hover:border-slate-600 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all">
-                Watch Demo
-              </Button>
+              </Link><Button
+  size="lg"
+  className="bg-transparent border-2 border-slate-700 text-white hover:bg-slate-800 hover:border-slate-600 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 font-semibold"
+>
+  Watch Demo
+</Button>
+
             </div>
 
             {/* Stats */}
@@ -318,37 +321,6 @@ export function LandingPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-cyan-600 to-indigo-600 p-12 text-center shadow-2xl shadow-blue-500/20"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-            <div className="relative z-10">
-              <h2 className="text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Join thousands of students and educators revolutionizing education finance with blockchain technology.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="/dashboard">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-xl shadow-xl hover:scale-105 transition-all font-semibold">
-                    Launch App Now
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
